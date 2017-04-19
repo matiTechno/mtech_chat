@@ -135,7 +135,7 @@ int main(int argc, char** argv)
         asio::io_service service;
         tcp::resolver resolver(service);
         // change localhost to server name
-        auto endp_it = resolver.resolve({"matitechno.hopto.org", "6969"});
+        auto endp_it = resolver.resolve({"188.116.55.131", "6969"});
         Client client(service, endp_it, ssys, &*msg_sound);
         auto fut = std::async(std::launch::async, [&service](){service.run();});
         (void)fut;
