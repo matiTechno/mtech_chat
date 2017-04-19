@@ -109,7 +109,7 @@ int main(int argc, char** argv)
         std::string client_name = "guest: ";
         int volume = 128;
         load_config(client_name, volume);
-        if(argc == 2)
+        if(argc > 1)
         {
             client_name = std::string(argv[1]) + ": ";
             save_config(client_name, volume);
