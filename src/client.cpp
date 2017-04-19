@@ -129,7 +129,8 @@ int main(int argc, char** argv)
                      "type ~<0-128> to set sound volume\n"
                      "all changes are saved to res/client_config\n"
                      "(relative to application dir)\n"
-                     "your name: " + std::string(client_name, 0, client_name.size() - 2) << std::endl;
+                     "your name: " + std::string(client_name, 0, client_name.size() - 2) + '\n'
+                  << "WAIT for welcome msg" << std::endl;
 
         asio::io_service service;
         tcp::resolver resolver(service);
